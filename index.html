@@ -14,26 +14,30 @@
     <body>
         <header class="header">
             <a href="#" class="logo"><span>Alex Mwangi</span> </a>
-            <ul class="nav-links">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-            <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>
-            <button class="visit-btn">Visit Github</button>
+            <nav id="navLinks" class="hidden">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>
+            </div>
+            <button class="visit-btn" onclick="window.location.href='https://github.com/Congressman-bot'">Visit Github</button>
         </header>
         <section id="about" class="about">
             <div class="about-container">
-                <img src="images/image1.jpg" alt="">
+                <img src="images/image1.jpg" alt="profile-photo">
                 <div class="info-box">
                     <div class="text">
                         <h3>Hi, I am</h3>
@@ -41,16 +45,14 @@
                         <span>Software Engineer</span>
                     </div>
                     <div class="btn-group">
-                        <div class="btn">
-                            Download CV
-                        </div>
+                        <a href="Docs/Alex-Mwangi CV.pdf" download="" class="btn">Download CV</a>
                         <div class="btn">
                             Contact
                         </div>
                     </div>
                     <div class="socials">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github" onclick="window.location.href='https://github.com/Congressman-bot'"></i>
+                        <i class="fa-brands fa-linkedin" onclick="window.location.href='https://www.linkedin.com/in/alex-mwangi-456392338/'"></i>
                     </div>
                 </div>
             </div>
@@ -64,19 +66,18 @@
                         <span>Frontend Development</span>
                         <h3>2 Years</h3>
                         <p>
-                            A strong software engineer resume description should highlight your technical skills,
-                            experience with programming languages and frameworks, and ability to design, develop, 
-                            and maintain software solutions.
+                            Hands-on experience in developing responsinve websites using HTML, CSS and
+                            JavaScript, with additional exprerience in working with wordpress and tools like NodeJS
                         </p>
                     </div>
                     <div class="grid-card">
                         <i class="fa-solid fa-file-code"></i>
-                        <span>Graphic Design</span>
-                        <h3>1 Years</h3>
+                        <span>AI & Machine Learning</span>
+                        <h3>1 Year</h3>
                         <p>
-                            A strong software engineer resume description should highlight your technical skills,
-                            experience with programming languages and frameworks, and ability to design, develop, 
-                            and maintain software solutions.
+                            Fairly stable background in AI and Machine Learning having participated in a couple of AI
+                            projects. Developed my own AI model that enables one organize their schedules, reducing 
+                            work loads.
                         </p>
                     </div>
                     <div class="grid-card">
@@ -84,9 +85,9 @@
                         <span>Backend Development</span>
                         <h3>3 Years</h3>
                         <p>
-                            A strong software engineer resume description should highlight your technical skills,
-                            experience with programming languages and frameworks, and ability to design, develop, 
-                            and maintain software solutions.
+                            Have experience in back-end development, explicitly with Python, Java, C and C++. I'm also 
+                            extending my knowledge by learning new languages and frameworks. I have skills in working with 
+                            frameworks such as Django and Spring.
                         </p>
                     </div>
                     <div class="grid-card">
@@ -108,25 +109,25 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <img class="image" src="images/image2.jpg" alt="Ecommerce website">
-                    <h3>Project X</h3>
+                    <h3>Rentpay</h3>
                     <p>
-                        A strong software engineer resume description should highlight your technical skills,
-                        experience with programming languages and frameworks, and ability to design, develop, 
-                        and maintain software solutions.
+                        Built a Rent Payment web application called RentPay using modern web technologies to 
+                        streamline rent collection and property management for realtors, with additional features 
+                        for property listings and advertising.
                     </p>
                     <div class="btn">Live Demo</div>
                     <div class="btn">Github</div>
                 </div>
                 <div class="project-card">
                     <img class="image" src="images/image3.jpg" alt="Ecommerce website">
-                    <h3>Project Y</h3>
+                    <h3>Student Registration</h3>
                     <p>
-                        A strong software engineer resume description should highlight your technical skills,
-                        experience with programming languages and frameworks, and ability to design, develop, 
-                        and maintain software solutions.
+                        Developed a simple student registration program using Java Swing and mySql database. I used
+                        mySqlconnector which would enable a student's data to be entered into the database and 
+                        can be accessed throught the phpmyadmin localhost
                     </p>
                     <div class="btn">Live Demo</div>
-                    <div class="btn">Github</div>
+                    <div class="btn" onclick="window.location.href='https://github.com/Congressman-bot/Student_Registration_Java'">Github</div>
                 </div>
                 <div class="project-card">
                     <img class="image" src="images/image4.jpg" alt="Ecommerce website">
@@ -142,14 +143,20 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <div class="input-box">
+            <form action="https://formspree.io/f/xovklbrk" method="POST" class="input-box">
                 <div class="section-title">Contact Me</div>
+
                 <div class="input">
-                    <input type="text" placeholder="exampleemail.com">
+                    <input type="text" name="email" placeholder="exampleemail.com" required>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="btn">Submit</div>
-            </div>
+
+                <div class="input">
+                    <textarea type="message" placeholder="Your message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
         </section>
         <footer>
             <ul>
